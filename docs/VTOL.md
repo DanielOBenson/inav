@@ -162,7 +162,7 @@ save
    - Conduct a bench test and see the orientation of the model changes in inav-configurator setup tab
 
 # STEP3: Mode Tab Settings:
-### We recommend using an 3-pos switch on you radio to activate these modes, So pilot can jump in or bell out at any moment.
+### We recommend using an 3-pos switch on you radio to activate these modes, So pilot can jump in or bail out at any moment.
 ### Here is a example, in the bottom of inav-configurator Modes tab:
 ![Alt text](Screenshots/mixer_profile.png)
 |  1000~1300 |  1300~1700  | 1700~2000 |
@@ -178,16 +178,16 @@ save
 Conduct a bench test on the model (without props attached). The model can now switch between fixed-wing and multi-copter modes while armed. Furthermore, it is capable of mid-air switching, resulting in an immediate stall upon entering fixed-wing profile
 
 # STEP4: Tilting Servo Setup (Recommended)
-### Setting up the tilting servos to operate correclty is crucial for correct yaw control of the craft. Using the default setup works, but will most likely result in your craft crawling forward with evey yaw input.
-The steps below describe how you can fine-tune the tilting servos such as to obtian the desired result.
+### Setting up the tilting servos to operate correctly is crucial for correct yaw control of the craft. Using the default setup works, but will most likely result in your craft crawling forward with evey yaw input.
+The steps below describe how you can fine-tune the tilting servos to obtian the desired result.
 
 1. **Set the tilt servos at 45 degrees:**
    - Connect and power the tilting servos with your flight controller.
    - Enter transition mode (your switch should be in the mid-position).
    - Check from the Outputs tab output that the tilt servo channels are exactly at 1500μs.
    - In this mode, your tilt servos should be at the 45-degree position and you can now mount the motor and prop to your tilt servo such that the angle of the motor mounting plate is at 45 degrees upwards.
-   - NOTE1: If you have dedicated tilt servos, you may have engraved indeces on the servos and tilting motor sassembly to help you with this step. If the servos don't end up exactly at 45 degrees due to the teeth on the servo and the control arm/plate, don't worry, this will be automatically adjusted after completing the other steps below.
-   - NOTE2: If you are using control rods to adjust the tilt of the servos, adjust the lenth of your control rod and the position of the control arm position the control arm as close as possible to the mid position. It will depend on the oriatation of the servo, but generally speaking, the control arm of the servo should be pointed perpendicular to the fuselage when the motor mounts are at the 45 degree setting.
+   - NOTE1: If you have dedicated tilt servos, you may have engraved indeces on the servos and tilting motor assembly to help you with this step. If the servos don't end up exactly at 45 degrees due to the teeth on the servo and the control arm/plate, don't worry, this will be automatically adjusted after completing the other steps below.
+   - NOTE2: If you are using control rods to adjust the tilt of the servos, adjust the lenth of your control rod and the position of the control arm position the control arm as close as possible to the mid position. It will depend on the orientation of the servo, but generally speaking, the control arm of the servo should be pointed perpendicular to the fuselage when the motor mounts are at the 45 degree setting.
 
 2. **Switch to Multicopter/Tricopter:**
    - Assuming that you have set up your mixer similar to STEP1 and STEP2, you can now switch to the tricopter/multicopter mode and your servos should be tilting the motors upwards. If this is not the case, reverse the servo(s) in the Outputs tab such that the servo(s) is/are pointed upwards.
@@ -195,7 +195,7 @@ The steps below describe how you can fine-tune the tilting servos such as to obt
    - Also, ensure that your MAX values in the Mixer tab are at 100 and -100, so that your servo will move to the maximum position, as shown in the screenshots in STEP1 and STEP2.
 
 3. **Adjust the maximum throws for the Multicopter/Tricopter mode:**
-   - While in tricopter mode, go to the Outputs tab and adjust the endpoints MIN and MAX values such that when your motors are pointed slightly backwards.
+   - While in tricopter mode, go to the Outputs tab and adjust the endpoints MIN and MAX values so your motors are pointed slightly backwards.
    - Rotate the prop such that it is pointed backwards towards the wing/motor mount and ensure that the gap is the same on both sides by adjusting the MIN and MAX values for the tilt servo channels.
    - NOTE: You can check the distance with calipers or gauge blocks. Alternatively, you can adjust the MIN and MAX for your tilting servos such that the props are just touching the top of the wing or motor mount, and then you can increase/degrease the MIN and MAX values for each channel by the same ammount for both servos. This should ensure that you have the same gap between the tip of the prop and the wing or motor mount for both sides.
 
@@ -203,7 +203,7 @@ The steps below describe how you can fine-tune the tilting servos such as to obt
    - Repeat the same step as point 3 with the model in fixed-wing mode, where the servos are tilted forwards.
    - For this step, you just have to make sure that the motors are pointed exactly forwards.
    - You can do this by adjusting the respective MIN and MAX values in the Output tab for the tilt servo channels while in fixed-wing mode.
-   - NOTE: Ensuring that your servos are tilted exactly forward is a crucial step as it can cause the plane to roll slightly if that it is not the case. However, ensuring the exact aligment will depend on your specific setup. If you are using dedicated tilting motor servos rather than standard servos with control arms and pushrods, you can make sure that you are exact by measuring the distance between the front edge of the tilting servo and the of the motor mounting plate. If the disances are the uniform across each mount and same on both motors, your servos are pointed forwads correctly.
+   - NOTE: Ensuring that your servos are tilted exactly forward is a crucial step as it can cause the plane to roll slightly if that it is not the case. However, insuring the exact aligment will depend on your specific setup. If you are using dedicated tilting motor servos rather than standard servos with control arms and pushrods, you can make sure that you are exact by measuring the distance between the front edge of the tilting servo and the of the motor mounting plate. If the disances are uniform across each mount and the same on both motors, your servos are pointed forwads correctly.
 
 5. **Adjsut the vertival position of the tilt servos:**
    - Switch back to multicopter/tricopter mode and open the Mixer tab.
@@ -226,7 +226,7 @@ The steps below describe how you can fine-tune the tilting servos such as to obt
 Optional Setup Step for Tilt Servos:
 
 8. **Reversing tilt servos and mixer signs:**
-If you have set up the mixer as suggested in STEP1 and STEP2, you may have to deal with negative values for the mixer. You may wish to reverese a servo so that you don't have to deal with the negative signs. In that case, you may have to adjust the MIN and MAX values from point 4 again, so that your tilt servos are operating correctly. Check the operation of the servos once again for the YAW control in multicopter/tricipter mode as well as the horixontal position of the tilt servos in fixed-wing mode.
+If you have set up the mixer as suggested in STEP1 and STEP2, you may have to deal with negative values for the mixer. You may wish to reverese a servo so that you don't have to deal with the negative signs. In that case, you may have to adjust the MIN and MAX values from point 4 again, so that your tilt servos are operating correctly. Check the operation of the servos once again for the YAW control in multicopter/tricipter mode as well as the horizontal position of the tilt servos in fixed-wing mode.
 
 
 # STEP5: Transition Mixing (Multi-Rotor Profile)(Recommended)
@@ -287,6 +287,6 @@ If you set `mixer_automated_switch` to `OFF` for all mixer profiles (the default
 - In some tilting motor models, you may experience roll/yaw coupled oscillations when `MIXER TRANSITION` is activated. To address this issue, you can try the following:
     1. Use prop blade meets at top/rear prop direction for tilting motors to balance the effects of torque and P-factor. 
     2. In addition to 1. Add a little yaw mixing(about 0.2) in tilt motors.
-- There will be a time window that tilting motors is providing up lift but rear motor isn't. Result in a sudden pitch raise on the entering of the mode. Use the max speed or faster speed in tiling servo to reduce the time window. OR lower the throttle on the entering of the FW mode to mitigate the effect.
+- There will be a time window that tilting motors is providing up lift but rear motor isn't. Result in a sudden pitch raise on the entering of the mode. Use the max speed or faster speed in tilting servo to reduce the time window. OR lower the throttle on the entering of the FW mode to mitigate the effect.
 ## Dedicated forward motor 
 - Easiest way to setup a vtol. and efficiency can be improved by using different motor/prop for hover and forward flight
